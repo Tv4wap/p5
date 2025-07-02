@@ -23,14 +23,13 @@ body {background:#000;
 <div id="player"></div>
 
 <script>
-const URLSearchParams = new URLSearchParams(window.location.search);
-
-
-const link=Object.fromEntries(urlSearchParams.entries());
+const key=new URLSearchParams(window.location.search);
 
 
 
-var parts = URLSearchParams.split('|');
+
+
+var parts = key.split('|');
 var url = parts[0]; // The DASH MPD URL
 var query_string = parts[1];
 
