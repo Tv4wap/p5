@@ -26,11 +26,11 @@ body {background:#000;
 // The provided URL with the DRM parameters
 
 
-     const queryParams = new URLSearchParams(window.location.search);
-        const input_url = getUrlParameter('url');
+     const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
 
 
-var parts = input_url.split('|');
+var parts = params.split('|');
 var url = parts[0]; // The DASH MPD URL
 var query_string = parts[1];
 
