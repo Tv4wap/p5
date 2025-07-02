@@ -26,8 +26,8 @@ body {background:#000;
 // The provided URL with the DRM parameters
 
 
-     const urlParams = new URLSearchParams(window.location.search);
-    const input_url = urlParams.get('url');
+     const queryParams = new URLSearchParams(window.location.search);
+        const input_url = getUrlParameter('url');
 
 
 var parts = input_url.split('|');
