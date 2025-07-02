@@ -23,13 +23,14 @@ body {background:#000;
 <div id="player"></div>
 
 <script>
-// The provided URL with the DRM parameters
+const URLSearchParams = new URLSearchParams(window.location.search);
 
 
-     const urlSearchParams = new URLSearchParams(window.location.search);
-const params ="https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd?|drmScheme=clearkey&drmLicense=ae26845bd33038a9c0774a0981007294:63ac662dde310cfb4cc6f9b43b34196d";
+const link=Object.fromEntries(urlSearchParams.entries());
 
-var parts = params.split('|');
+
+
+var parts = link.split('|');
 var url = parts[0]; // The DASH MPD URL
 var query_string = parts[1];
 
